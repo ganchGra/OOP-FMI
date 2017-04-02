@@ -1,0 +1,6 @@
+﻿  Employer.cpp
+  Date.cpp
+e:\fmi\ii semestyr\oop\project\classdata\data\date.cpp(31): error C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
+  Generating Code...
+e:\fmi\ii semestyr\oop\project\classdata\data\employer.cpp(73): error C4716: 'Employer::getData': must return a value

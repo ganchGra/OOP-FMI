@@ -6,7 +6,6 @@
 ///
 EGN::EGN()
 {
-	allNum;
 	year = 1900;
 	month = 1;
 	day = 1;
@@ -21,13 +20,7 @@ EGN::EGN(const char * egn)
 {
 	setEGN(egn);
 }
-///
-///Delete constructor
-///
-EGN::~EGN() 
-{
-	//TODO
-}
+
 ///
 ///Check if the EGN is valid and set the value
 ///
@@ -217,7 +210,7 @@ char EGN::getGender() const
 //char* EGN::getEGN() const
 //{
 //	//TODO
-//	//how to return char allnum[10]
+//  // Make copy 
 //	//return allNum;  
 //}
 

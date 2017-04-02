@@ -1,0 +1,5 @@
+﻿  ex1.cpp
+e:\fmi\ii semestyr\oop\project\structure\ex1\ex1.cpp(27): warning C4227: anachronism used: qualifiers on reference are ignored
+e:\fmi\ii semestyr\oop\project\structure\ex1\ex1.cpp(58): warning C4227: anachronism used: qualifiers on reference are ignored
+  ex1.vcxproj -> E:\FMI\II semestyr\OOP\Project\Structure\Debug\ex1.exe
+  ex1.vcxproj -> E:\FMI\II semestyr\OOP\Project\Structure\Debug\ex1.pdb (Full PDB)

@@ -24,9 +24,8 @@ private:
 public:
 	EGN();
 	EGN(const char * egn);
-	~EGN(); //TODO ??
 
-	//char* getEGN() const;  //TODO ??
+	//char* getEGN() const;  //TODO 
 	int getYear()const;
 	int getMonth()const;
 	int getDay() const;

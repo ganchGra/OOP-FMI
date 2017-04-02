@@ -8,7 +8,6 @@ int main()
 	std::cout << "INSERT EGN: ";
 	std::cin.clear();
 	std::cin.getline(egntest, 11);
-	//std::cin.getline(test.setEGN, 11); //How to use & to create pointer to member ?
 	test.setEGN(egntest);
 
 	std::cout << "Your birthday is: "; test.printBirthday();

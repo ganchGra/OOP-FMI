@@ -1,0 +1,6 @@
+﻿  Set.cpp
+main.obj : error LNK2019: unresolved external symbol "public: class Set __thiscall Set::getUnion(class Set const &)const " (?getUnion@Set@@QBE?AV1@ABV1@@Z) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: class Set __thiscall Set::getIntersection(class Set const &)const " (?getIntersection@Set@@QBE?AV1@ABV1@@Z) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: class Set __thiscall Set::getDifference(class Set const &)const " (?getDifference@Set@@QBE?AV1@ABV1@@Z) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: class Set __thiscall Set::getSymmetricDifference(class Set const &)const " (?getSymmetricDifference@Set@@QBE?AV1@ABV1@@Z) referenced in function _main
+E:\FMI\II semestyr\OOP\Project\ClassSet\Debug\ClassSet.exe : fatal error LNK1120: 4 unresolved externals
