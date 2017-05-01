@@ -1,0 +1,3 @@
+Guma | 10 | 1
+Volan | 15 | 3
+Sedalka | 20 | 1
