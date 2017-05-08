@@ -1,7 +1,9 @@
 #include<iostream>
 #include"bicyDetails.h"
+#include"Bicy.h"
 #include<fstream>
 
+///TEXT FILE
 void insertBicyDetailsInFile(std::ofstream& output,const BicyDetail& detail )
 {
 	if (!output) return;
@@ -13,18 +15,6 @@ void insertBicyDetailsInFile(std::ofstream& output,const BicyDetail& detail )
 		<< std::endl;
 }
 
-bool insertBicyDetailsInBinaryFile(std::fstream& output, const BicyDetail& detail)
-{
-	output.write((const char*)&detail, sizeof(BicyDetail));
-
-	return output.good();
-}
-bool loadDetailsFromBinary(std::fstream& file, BicyDetail& detail)
-{
-	file.read((char*)&detail, sizeof(BicyDetail));
-	
-	return file && file.gcount() == sizeof(BicyDetail);
-}
 bool readDetailFile(std::ifstream& file, BicyDetail& detail)
 {
 	if (!file) return false;
@@ -99,7 +89,24 @@ void insert(int numDetails, std::ofstream& file)
 		--numDetails;
 	}
 }
+//END TEXT FILE
 
+///BINARY FILE
+bool insertBicyDetailsInBinaryFile(std::fstream& output, const BicyDetail& detail)
+{
+	output.write((const char*)&detail, sizeof(BicyDetail));
+
+	return output.good();
+}
+bool loadDetailsFromBinary(std::fstream& file, BicyDetail& detail)
+{
+	file.read((char*)&detail, sizeof(BicyDetail));
+	
+	return file && file.gcount() == sizeof(BicyDetail);
+}
+///END BINARY FILE
+
+///PRINT INFORMATION FROM THE FILE
 void print(std::ostream& out, const BicyDetail& detail)
 {
 	out << "Detail name: " << detail.getType() << "\n"
@@ -128,17 +135,22 @@ int main()
 	//file.close();
 
 	std::ifstream file("BicyDetails.txt", std::ios::in);
-	std::fstream binaryFile("BicyDetails.bin", std::ios::out| std::ios::in |std::ios::binary);
+	
 	if (!file)
 	{
 		std::cout << "BicyDetails.txt cannot be opened..";
 		return 1;
 	}
+	
+	std::fstream binaryFile("BicyDetails.bin", std::ios::out| std::ios::in |std::ios::binary);
+
 	if (!binaryFile)
 	{
 		std::cout << "BicyDetails.bin cannot be opened..";
 		return 1;
 	}
+	/*Read and print from the text file and insert only top quality details in the binary file*/
+	std::cout << "\nAll details IN THE TEXT FILE:\n";
 	BicyDetail detail;
 	while (readDetailFile(file, detail))
 	{
@@ -147,20 +159,83 @@ int main()
 			insertBicyDetailsInBinaryFile(binaryFile, detail);
 	}
 
-	std::cout << "\nDETAILS IN THE BINARY FILE:\n";
+	/*Print all top quality details from the binary file*/
+	std::cout << "\nTot Quality details IN THE BINARY FILE:\n";
 	binaryFile.ignore();
 	binaryFile.seekg(0, std::ios::beg);
 
-	///ERROR   ??? 
-	BicyDetail binaryDetail;
 	while (loadDetailsFromBinary(binaryFile,detail))
 	{
 		print(std::cout, detail);
 	}
 
-	file.close();
 	binaryFile.close();
+	file.close();
 
+	/**************************SMALL TEST****************************/
+
+	/*******************Create new bicy****************/
+	std::cout << "\n\nCreate new bike...\n";
+
+	std::ifstream file2("BicyDetails.txt", std::ios::in);
+	if (!file2)
+	{
+		std::cout << "BicyDetails.txt cannot be opened..";
+		return 1;
+	}
+
+	/*Take all details from the text file*/
+	BicyDetail bmxDet[3];
+	size_t position = 0;
+	while (readDetailFile(file2, detail))
+	{
+		bmxDet[position] = detail;
+		position++;
+	}
+	file2.close();
+
+	Bicy BMX;
+	BMX.setBrand("BMX");
+	BMX.setDetails(bmxDet, 3);
+	BicyDetail chain("Veriga", 30, 1);
+	
+	Bicy TREK("TREK", NULL, 0);
+	TREK + chain;
+	TREK.print();
+
+	std::cout <<"---------------------"<< std::endl;
+	BMX.print();
+
+	std::cout << "---------------------" << std::endl;
+
+	BMX + chain;
+	BMX.print();
+	std::cout << "---------------------" << std::endl;
+
+	TREK - chain;
+	TREK.print();
+
+	std::cout << "---------------------" << std::endl;
+
+	std::cout << "Compare BMX and TREK" << std::endl;
+	std::cout << "Are equal: "<<((BMX == TREK)?"True":"False") << std::endl;
+
+	std::cout << "---------------------" << std::endl;
+	std::cout << "Are different: " << ((BMX != TREK) ? "True" : "False") << std::endl;
+	
+	std::cout << "---------------------" << std::endl;
+	std::cout << "Is smaller: " << ((BMX < TREK) ? "True" : "False") << std::endl;
+
+	std::cout << "---------------------" << std::endl;
+	std::cout << "Is smaller or equal: " << ((BMX <= TREK) ? "True" : "False") << std::endl;
+
+	std::cout << "---------------------" << std::endl;
+	std::cout << "Is bigger: " << ((BMX > TREK) ? "True" : "False") << std::endl;
+
+	std::cout << "---------------------" << std::endl;
+	std::cout << "Is bigger: " << ((BMX > TREK) ? "True" : "False") << std::endl;
+
+	/**************************END SMALL TEST*************************/
 
 	return 0;
 }

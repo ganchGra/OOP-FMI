@@ -16,19 +16,20 @@ void BicyDetail::setType(const char* type)
 }
 void BicyDetail::setPrice(const int price)
 {
+	if (price < 0) 
+		throw "Invalid price...";
+
 	this->price = price;
 }
 void BicyDetail::setQuality(const int quality)
 {
 	if (quality < 1 || quality > 3)
-	{
-		throw "Invalid quality";
-	}
+		throw "Invalid quality...";
+	
 	this->quality = quality;
 }
-///
 ///END set details
-///
+
 BicyDetail ::BicyDetail(const char* type, int price, int quality)
 {
 	setType(type);
@@ -64,7 +65,7 @@ BicyDetail::~BicyDetail()
 }
 
 ///
-///Getting func
+///Getting function
 ///
 const char* BicyDetail::getType() const
 {
@@ -79,10 +80,14 @@ int BicyDetail::getQuality() const
 {
 	return this->quality;
 }
-void BicyDetail::Print()
+
+///
+///Print Bicy detail information
+///
+void BicyDetail::Print() const
 {
 	std::cout
-		<< this->getType()  << "\; "
-		<< this->getPrice() << "euro\; "
-		<< this->getQuality() << "\;" << std::endl;
+		<< this->getType()  << "-"
+		<< this->getPrice() << "euro - "
+		<<"Quality: "<< this->getQuality()<< std::endl;
 }

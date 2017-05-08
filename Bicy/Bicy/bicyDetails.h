@@ -21,7 +21,7 @@ public:
 	int getQuality() const;
 
 
-	void Print();
+	void Print() const;
 private:
 	char * type;
 	int price;
