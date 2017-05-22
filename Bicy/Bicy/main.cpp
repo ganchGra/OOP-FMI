@@ -92,13 +92,13 @@ void insert(int numDetails, std::ofstream& file)
 //END TEXT FILE
 
 ///BINARY FILE
-bool insertBicyDetailsInBinaryFile(std::fstream& output, const BicyDetail& detail)
+bool insertBicyDetailsInBinaryFile(std::ofstream& output, const BicyDetail& detail)
 {
 	output.write((const char*)&detail, sizeof(BicyDetail));
 
 	return output.good();
 }
-bool loadDetailsFromBinary(std::fstream& file, BicyDetail& detail)
+bool loadDetailsFromBinary(std::ifstream& file, BicyDetail& detail)
 {
 	file.read((char*)&detail, sizeof(BicyDetail));
 	
@@ -142,7 +142,7 @@ int main()
 		return 1;
 	}
 	
-	std::fstream binaryFile("BicyDetails.bin", std::ios::out| std::ios::in |std::ios::binary);
+	std::ofstream binaryFile("BicyDetails.bin", std::ios::binary);
 
 	if (!binaryFile)
 	{
@@ -158,19 +158,30 @@ int main()
 		if(detail.getQuality() == 1)
 			insertBicyDetailsInBinaryFile(binaryFile, detail);
 	}
+	binaryFile.close();
+	file.close();
 
 	/*Print all top quality details from the binary file*/
-	std::cout << "\nTot Quality details IN THE BINARY FILE:\n";
-	binaryFile.ignore();
-	binaryFile.seekg(0, std::ios::beg);
 
-	while (loadDetailsFromBinary(binaryFile,detail))
+	///PROBLEM
+	std::cout << "\nTot Quality details IN THE BINARY FILE:\n";
+	
+	std::ifstream readbinaryFile("BicyDetails.bin",std::ios::binary);
+	readbinaryFile.ignore();
+	readbinaryFile.seekg(0, std::ios::beg);
+	if (!readbinaryFile)
+	{
+		std::cout << "BicyDetails.bin cannot be opened..";
+		return 1;
+	}
+
+	while (loadDetailsFromBinary(readbinaryFile,detail))
 	{
 		print(std::cout, detail);
 	}
 
-	binaryFile.close();
-	file.close();
+	readbinaryFile.close();
+
 
 	/**************************SMALL TEST****************************/
 

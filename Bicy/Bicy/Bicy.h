@@ -34,7 +34,7 @@ public:
 
 	//Return the pointer to the part with the corresponding name, if exist. If not return NULL.
 	//TODO???
-	char* operator[](const char * index) const;
+	const BicyDetail* operator[](const char * index) const;
 
 	///
 	///Set bicycle information
@@ -64,7 +64,7 @@ private:
 
 	/* The price is the sum of the prices of the singol detail that build it,
 	* multiplied by 1.5. */
-	void setPrice(const BicyDetail *detail,size_t numofDetails);
+	void setPrice();
 	///
 	///Help function to swap and setprice to the bike
 	///

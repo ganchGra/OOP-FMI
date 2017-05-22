@@ -6,14 +6,16 @@
 ///
 void Bicy::setBrand(const char* brand)
 {
-	if (brand == NULL)
+	if (brand != NULL)
 	{
+		//crashva
+		//delete[] this->brand;
 		this->brand = NULL;
-		return;
+
+		size_t len = strlen(brand) + 1;
+		this->brand = new char[len];
+		strcpy_s(this->brand, len, brand);
 	}
-	size_t len = strlen(brand) + 1;
-	this->brand = new char[len];
-	strcpy_s(this->brand, len, brand);
 }
 
 void Bicy::setDetails(const BicyDetail * detail, size_t numofDetails)
@@ -28,14 +30,14 @@ void Bicy::setDetails(const BicyDetail * detail, size_t numofDetails)
 	for (size_t i = 0; i < numofDetails; i++)
 		this->details[i] = detail[i];
 
-	setPrice(detail, numofDetails);
+	this->setPrice();
 }
-void Bicy::setPrice(const BicyDetail *detail, size_t numofDetails)
+void Bicy::setPrice()
 {
 	this->price = 0;
-	if (detail == NULL) return;
-	for (size_t i = 0; i < numberOfDetails; i++)
-		this->price += detail[i].getPrice();
+	if (this->details == NULL) return;
+	for (size_t i = 0; i < this->numberOfDetails; i++)
+		this->price += details[i].getPrice();
 
 	this->price = price * 1.5;
 }
@@ -48,7 +50,7 @@ void Bicy::swapDetails(BicyDetail *& dest, BicyDetail *&src, const size_t numofD
 {
 	delete[] dest;
 	dest = src;
-	setPrice(this->details, this->numberOfDetails);
+	this->setPrice();
 }
 
 ///
@@ -90,9 +92,9 @@ size_t Bicy::getNumPrimeDetails() const
 
 
 Bicy::Bicy()
+	:brand(NULL),details(NULL)
 {
-	setBrand(NULL);
-	setDetails(NULL,0);
+	//setDetails(NULL,0);
 }
 Bicy::Bicy(const char* brand, const BicyDetail * details, const size_t numberOfDetails)
 {
@@ -140,7 +142,15 @@ Bicy& Bicy::operator+(const BicyDetail& detail)
 ///
 Bicy& Bicy::operator-(const BicyDetail& detail)
 {
-	BicyDetail * buffer = new BicyDetail[this->numberOfDetails - 1];
+	size_t totalDetails = this->getNumOfDetail() - 1;
+	if (totalDetails == 0)
+	{
+		this->details = NULL;
+		this->numberOfDetails--;
+		return *this;
+	}
+
+	BicyDetail * buffer = new BicyDetail[totalDetails];
 	size_t position = 0;
 
 	for (size_t i = 0; i < this->numberOfDetails; i++)
@@ -198,15 +208,11 @@ bool Bicy::operator>=(const Bicy& other) const
 
 /*Read README to do it*/
 //Return the pointer to the part with the corresponding name, if exist. If not return NULL.
-char* Bicy::operator[](const char * index) const
+const BicyDetail* Bicy::operator[](const char * index) const
 {
-	size_t indexLen = strlen(index);
-	size_t brandLen = strlen(this->brand);
-	if (indexLen > brandLen)
-		return NULL;
+	
 
-	//TODO ??
-
+	return NULL;
 }
 
 
