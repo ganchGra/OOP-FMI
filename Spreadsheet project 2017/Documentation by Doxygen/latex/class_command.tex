@@ -1,0 +1,110 @@
+\hypertarget{class_command}{}\section{Command Class Reference}
+\label{class_command}\index{Command@{Command}}
+
+
+Class \hyperlink{class_command}{Command} description.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_command_a18df2d81039392daeb0b78c346a70537}\label{class_command_a18df2d81039392daeb0b78c346a70537}} 
+\hyperlink{class_command_a18df2d81039392daeb0b78c346a70537}{Command} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a28004856f059802e3016c780c80e5181}\label{class_command_a28004856f059802e3016c780c80e5181}} 
+\hyperlink{class_command_a28004856f059802e3016c780c80e5181}{Command} (const \hyperlink{class_command}{Command} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a7a1d6c31ddfc1ab65453a93de293be4e}\label{class_command_a7a1d6c31ddfc1ab65453a93de293be4e}} 
+\hyperlink{class_command_a7a1d6c31ddfc1ab65453a93de293be4e}{Command} (const \hyperlink{class_string}{String} text)
+\begin{DoxyCompactList}\small\item\em Create new obj from \hyperlink{class_string}{String}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a7d6b48fcb77bbbc99d7661cce384d8dc}\label{class_command_a7d6b48fcb77bbbc99d7661cce384d8dc}} 
+\hyperlink{class_command_a7d6b48fcb77bbbc99d7661cce384d8dc}{Command} (const char $\ast$text)
+\begin{DoxyCompactList}\small\item\em Create new obj from char array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_ac86295c87439d6e845bb47e702be5e9e}\label{class_command_ac86295c87439d6e845bb47e702be5e9e}} 
+\hyperlink{class_command_ac86295c87439d6e845bb47e702be5e9e}{Command} (const char symbol)
+\begin{DoxyCompactList}\small\item\em Create new obj from single character. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_ab552bb3a07fdd1acbfd8ea76e69b2278}\label{class_command_ab552bb3a07fdd1acbfd8ea76e69b2278}} 
+\hyperlink{class_command_ab552bb3a07fdd1acbfd8ea76e69b2278}{$\sim$\+Command} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a6f283aa5560e5e044b53aa1f5739d7ed}\label{class_command_a6f283aa5560e5e044b53aa1f5739d7ed}} 
+\hyperlink{class_command}{Command} \& \hyperlink{class_command_a6f283aa5560e5e044b53aa1f5739d7ed}{operator=} (const \hyperlink{class_command}{Command} \&rhs)
+\begin{DoxyCompactList}\small\item\em Assign from \hyperlink{class_command}{Command} obj. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a8b6fd56b6bbcc598523ab947367720c1}\label{class_command_a8b6fd56b6bbcc598523ab947367720c1}} 
+\hyperlink{class_command}{Command} \& \hyperlink{class_command_a8b6fd56b6bbcc598523ab947367720c1}{operator=} (const \hyperlink{class_string}{String} \&rhs)
+\begin{DoxyCompactList}\small\item\em Assign from \hyperlink{class_string}{String}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a7fa1e89e5a4aa8fed864046f20db1a3b}\label{class_command_a7fa1e89e5a4aa8fed864046f20db1a3b}} 
+\hyperlink{class_command}{Command} \& \hyperlink{class_command_a7fa1e89e5a4aa8fed864046f20db1a3b}{operator=} (const char $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em Assign from char array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_ab9b317d3af1cb59a7c402b9a41b7f624}\label{class_command_ab9b317d3af1cb59a7c402b9a41b7f624}} 
+\hyperlink{class_command}{Command} \& \hyperlink{class_command_ab9b317d3af1cb59a7c402b9a41b7f624}{operator=} (char symbol)
+\begin{DoxyCompactList}\small\item\em Assign from signle character. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_aff1c77698af9ba96ece3c7e98d83b0e5}\label{class_command_aff1c77698af9ba96ece3c7e98d83b0e5}} 
+\hyperlink{class_string}{String} \hyperlink{class_command_aff1c77698af9ba96ece3c7e98d83b0e5}{task} () const
+\begin{DoxyCompactList}\small\item\em Return command task. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a52a3124585505db25a55fc54d7aec603}\label{class_command_a52a3124585505db25a55fc54d7aec603}} 
+\hyperlink{class_string}{String} \hyperlink{class_command_a52a3124585505db25a55fc54d7aec603}{command\+Arg} () const
+\begin{DoxyCompactList}\small\item\em Return command argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_a57fbea0c0d10ef4b184c7ef3eb34590d}\label{class_command_a57fbea0c0d10ef4b184c7ef3eb34590d}} 
+void \hyperlink{class_command_a57fbea0c0d10ef4b184c7ef3eb34590d}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear command task and argument. \end{DoxyCompactList}\item 
+void \hyperlink{class_command_a9209fc53d344c17fe39e27a3ef5d566f}{set} (const \hyperlink{class_string}{String} text)
+\item 
+\mbox{\Hypertarget{class_command_aa13e98e5f35773b360931da7ac6ca504}\label{class_command_aa13e98e5f35773b360931da7ac6ca504}} 
+void {\bfseries set} (const char $\ast$text)
+\item 
+\mbox{\Hypertarget{class_command_a73871dc74261367bb8423544018e8d8d}\label{class_command_a73871dc74261367bb8423544018e8d8d}} 
+void {\bfseries set} (const char symbol)
+\item 
+void \hyperlink{class_command_a90eaeb4bfb180ca4cafa61db2b3e0677}{execute} () const
+\begin{DoxyCompactList}\small\item\em Execute the \hyperlink{class_spreadsheet}{Spreadsheet} command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{class_command}{Command} description. 
+
+Convert \hyperlink{class_string}{String} into \hyperlink{class_spreadsheet}{Spreadsheet} command task and command argument and execute the command
+
+
+
+ \hyperlink{class_spreadsheet}{Spreadsheet} support only a comma-\/separated values (C\+SV) files.
+
+Available \hyperlink{class_spreadsheet}{Spreadsheet} commands\+:
+\begin{DoxyItemize}
+\item open $<$\+Path\+To\+File$>$ -\/ Open specified file, given as the first argument. If the file does not exist then it\textquotesingle{}s been created.
+\item close -\/ Closes an already opened file without saving any changes in it. Close does not exit the program. If no file has been opened, you get an E\+R\+R\+OR.
+\item save -\/ Saves data in the opened file. If no file has been opened, you get an E\+R\+R\+OR.
+\item saveas $<$\+Path\+To\+File$>$ -\/ Saves data in the specified file, given as the first argument. If no file has been opened, you get an E\+R\+R\+OR.
+\item print -\/ Prints files data on console window. If no file has been opened, you get an E\+R\+R\+OR.
+\item edit R$<$value$>$C$<$value$>$ $<$\+New\+Cell\+Value$>$ -\/ Changes value in given cell. First argument specifies row and column of the cell. Second argument specifies the new cell value. Valids data types are\+: $<$integer$>$, $<$double$>$, "$<$string$>$", =$<$formula$>$.
+\item add \mbox{[}row$\vert$col\mbox{]} $<$unsigned$>$ -\/ Add empty row or column. Second argument specifies the number of the new rows or columns.
+\item exit -\/ Exit the program without saving any changes in opened file, if there is one.
+\item help -\/ Prints available commands info. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_command_a90eaeb4bfb180ca4cafa61db2b3e0677}\label{class_command_a90eaeb4bfb180ca4cafa61db2b3e0677}} 
+\index{Command@{Command}!execute@{execute}}
+\index{execute@{execute}!Command@{Command}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Execute the \hyperlink{class_spreadsheet}{Spreadsheet} command. 
+
+Execute \hyperlink{class_command}{Command}. \mbox{\Hypertarget{class_command_a9209fc53d344c17fe39e27a3ef5d566f}\label{class_command_a9209fc53d344c17fe39e27a3ef5d566f}} 
+\index{Command@{Command}!set@{set}}
+\index{set@{set}!Command@{Command}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Command\+::set (\begin{DoxyParamCaption}\item[{const \hyperlink{class_string}{String}}]{text }\end{DoxyParamCaption})}
+
+Set \hyperlink{class_command}{Command} values from different sources 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/ФМИ/\+I\+I semestyr/\+O\+O\+P/fn45311 Spreadsheet project-\/updated/\+Project Speadsheets/Command.\+h\item 
+D\+:/ФМИ/\+I\+I semestyr/\+O\+O\+P/fn45311 Spreadsheet project-\/updated/\+Project Speadsheets/Command.\+cpp\end{DoxyCompactItemize}

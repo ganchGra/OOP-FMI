@@ -1,0 +1,118 @@
+\hypertarget{class_cell_string}{}\section{Cell\+String Class Reference}
+\label{class_cell_string}\index{Cell\+String@{Cell\+String}}
+
+
+Class \hyperlink{class_cell_string}{Cell\+String} description.  
+
+
+
+
+{\ttfamily \#include $<$Cell\+String.\+h$>$}
+
+Inheritance diagram for Cell\+String\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cell_string}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cell_string_a6a7bf500e09988f0de08ceeb9699fff9}\label{class_cell_string_a6a7bf500e09988f0de08ceeb9699fff9}} 
+\hyperlink{class_cell_string_a6a7bf500e09988f0de08ceeb9699fff9}{Cell\+String} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cell_string_a6b310a8a51cca0a121ec497d4f954606}\label{class_cell_string_a6b310a8a51cca0a121ec497d4f954606}} 
+\hyperlink{class_cell_string_a6b310a8a51cca0a121ec497d4f954606}{Cell\+String} (const \hyperlink{class_string}{String} rhs)
+\begin{DoxyCompactList}\small\item\em Create new obj from \hyperlink{class_string}{String}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cell_string_afbddebf6bfc5d2deb316a60141485724}\label{class_cell_string_afbddebf6bfc5d2deb316a60141485724}} 
+\hyperlink{class_cell_string_afbddebf6bfc5d2deb316a60141485724}{Cell\+String} (const char $\ast$text)
+\begin{DoxyCompactList}\small\item\em Create new obj from char array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cell_string_a7381bd83019a62b33aac3d887da61b64}\label{class_cell_string_a7381bd83019a62b33aac3d887da61b64}} 
+\hyperlink{class_cell_string_a7381bd83019a62b33aac3d887da61b64}{Cell\+String} (char symbol)
+\begin{DoxyCompactList}\small\item\em Create new obj from single character. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_cell_type}{Cell\+Type} $\ast$ \hyperlink{class_cell_string_a293639128fa52df8f72f88335e23d2f0}{clone} () const
+\item 
+virtual void \hyperlink{class_cell_string_a13f416bd887f2cbceb93273316d16d65}{print} (std\+::ostream \&out) const
+\item 
+virtual unsigned \hyperlink{class_cell_string_a6a8f5570104283eb4bb8e9ed4b998fb7}{lenght} () const
+\item 
+virtual double \hyperlink{class_cell_string_a452054b2d80356d66ed7504d7b1b8d69}{value} () const
+\item 
+virtual \hyperlink{class_string}{String} \hyperlink{class_cell_string_a0670fd5a35f8e05c985379acd5e4b88f}{type} () const
+\item 
+virtual \hyperlink{class_string}{String} \hyperlink{class_cell_string_ac601c93ecb70391eae65236c56c561a5}{string\+Cell} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{class_cell_string}{Cell\+String} description. 
+
+\hyperlink{class_string}{String} type of the cell derivated class at \hyperlink{class_cell_type}{Cell\+Type} The class value can be converted to a number if it\textquotesingle{}s content is valid number 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cell_string_a293639128fa52df8f72f88335e23d2f0}\label{class_cell_string_a293639128fa52df8f72f88335e23d2f0}} 
+\index{Cell\+String@{Cell\+String}!clone@{clone}}
+\index{clone@{clone}!Cell\+String@{Cell\+String}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{class_cell_type}{Cell\+Type} $\ast$ Cell\+String\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Derivate class can be cloned -\/ Returns pointer to himself 
+
+Implements \hyperlink{class_cell_type_a8c534b1eed27659429f761fc76d51b89}{Cell\+Type}.
+
+\mbox{\Hypertarget{class_cell_string_a6a8f5570104283eb4bb8e9ed4b998fb7}\label{class_cell_string_a6a8f5570104283eb4bb8e9ed4b998fb7}} 
+\index{Cell\+String@{Cell\+String}!lenght@{lenght}}
+\index{lenght@{lenght}!Cell\+String@{Cell\+String}}
+\subsubsection{\texorpdfstring{lenght()}{lenght()}}
+{\footnotesize\ttfamily unsigned Cell\+String\+::lenght (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return lenght of the Cell type 
+
+Implements \hyperlink{class_cell_type_a1f8bd268dbd474dd8e08726a6efac066}{Cell\+Type}.
+
+\mbox{\Hypertarget{class_cell_string_a13f416bd887f2cbceb93273316d16d65}\label{class_cell_string_a13f416bd887f2cbceb93273316d16d65}} 
+\index{Cell\+String@{Cell\+String}!print@{print}}
+\index{print@{print}!Cell\+String@{Cell\+String}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Cell\+String\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Print on the stream given as the first argument 
+
+Implements \hyperlink{class_cell_type_a34413fcb76f292b6b8d08615765ba894}{Cell\+Type}.
+
+\mbox{\Hypertarget{class_cell_string_ac601c93ecb70391eae65236c56c561a5}\label{class_cell_string_ac601c93ecb70391eae65236c56c561a5}} 
+\index{Cell\+String@{Cell\+String}!string\+Cell@{string\+Cell}}
+\index{string\+Cell@{string\+Cell}!Cell\+String@{Cell\+String}}
+\subsubsection{\texorpdfstring{string\+Cell()}{stringCell()}}
+{\footnotesize\ttfamily \hyperlink{class_string}{String} Cell\+String\+::string\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return a content of the cell 
+
+Implements \hyperlink{class_cell_type_abba4d6d43efa340144d1ad09637e1aa9}{Cell\+Type}.
+
+\mbox{\Hypertarget{class_cell_string_a0670fd5a35f8e05c985379acd5e4b88f}\label{class_cell_string_a0670fd5a35f8e05c985379acd5e4b88f}} 
+\index{Cell\+String@{Cell\+String}!type@{type}}
+\index{type@{type}!Cell\+String@{Cell\+String}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \hyperlink{class_string}{String} Cell\+String\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return Cell type name 
+
+Implements \hyperlink{class_cell_type_ae31acfe1efc7776796d85918886247af}{Cell\+Type}.
+
+\mbox{\Hypertarget{class_cell_string_a452054b2d80356d66ed7504d7b1b8d69}\label{class_cell_string_a452054b2d80356d66ed7504d7b1b8d69}} 
+\index{Cell\+String@{Cell\+String}!value@{value}}
+\index{value@{value}!Cell\+String@{Cell\+String}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily double Cell\+String\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return value of the Cell type 
+
+Implements \hyperlink{class_cell_type_a6cbfc477f605049f2a007d8674442230}{Cell\+Type}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/ФМИ/\+I\+I semestyr/\+O\+O\+P/fn45311 Spreadsheet project-\/updated/\+Project Speadsheets/Cell\+String.\+h\item 
+D\+:/ФМИ/\+I\+I semestyr/\+O\+O\+P/fn45311 Spreadsheet project-\/updated/\+Project Speadsheets/Cell\+String.\+cpp\end{DoxyCompactItemize}

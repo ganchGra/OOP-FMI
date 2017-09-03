@@ -1,0 +1,106 @@
+\hypertarget{class_spreadsheet}{}\section{Spreadsheet Class Reference}
+\label{class_spreadsheet}\index{Spreadsheet@{Spreadsheet}}
+
+
+Class \hyperlink{class_spreadsheet}{Spreadsheet} description.  
+
+
+
+
+{\ttfamily \#include $<$Speadsheet.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spreadsheet_ac2cd7c97b5d73805edcd14891d910f51}\label{class_spreadsheet_ac2cd7c97b5d73805edcd14891d910f51}} 
+unsigned \hyperlink{class_spreadsheet_ac2cd7c97b5d73805edcd14891d910f51}{row} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows in the \hyperlink{class_spreadsheet}{Spreadsheet}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_abee8b54fceb0f2c4314bbaf624feed75}\label{class_spreadsheet_abee8b54fceb0f2c4314bbaf624feed75}} 
+unsigned \hyperlink{class_spreadsheet_abee8b54fceb0f2c4314bbaf624feed75}{col} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns in the \hyperlink{class_spreadsheet}{Spreadsheet}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_a29e1c16f68d43f5ce96c15f1c18c71de}\label{class_spreadsheet_a29e1c16f68d43f5ce96c15f1c18c71de}} 
+\hyperlink{class_string}{String} \hyperlink{class_spreadsheet_a29e1c16f68d43f5ce96c15f1c18c71de}{file\+Name} () const
+\begin{DoxyCompactList}\small\item\em Get file name of the \hyperlink{class_spreadsheet}{Spreadsheet} if is open. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_a4c8bab95a22c86d5a8a75e54a7e82c51}\label{class_spreadsheet_a4c8bab95a22c86d5a8a75e54a7e82c51}} 
+bool \hyperlink{class_spreadsheet_a4c8bab95a22c86d5a8a75e54a7e82c51}{is\+Open} () const
+\begin{DoxyCompactList}\small\item\em Get information if the \hyperlink{class_spreadsheet}{Spreadsheet} is open. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_aa46282ef1877328ccc2626791dbc7cdf}\label{class_spreadsheet_aa46282ef1877328ccc2626791dbc7cdf}} 
+unsigned \hyperlink{class_spreadsheet_aa46282ef1877328ccc2626791dbc7cdf}{get\+Cell\+Lenght} (unsigned index) const
+\begin{DoxyCompactList}\small\item\em Get max\+Cell lenght. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_a6d920dbf2f30f6c69955fd0d1a3980db}\label{class_spreadsheet_a6d920dbf2f30f6c69955fd0d1a3980db}} 
+const \hyperlink{class_cell_type}{Cell\+Type} $\ast$ \hyperlink{class_spreadsheet_a6d920dbf2f30f6c69955fd0d1a3980db}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{class_string}{String} arg) const
+\begin{DoxyCompactList}\small\item\em Take cell R$<$value$>$C$<$value$>$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_a85df209927f0e389fdb0a4528c62a29f}\label{class_spreadsheet_a85df209927f0e389fdb0a4528c62a29f}} 
+\hyperlink{class_cell_type}{Cell\+Type} $\ast$ {\bfseries operator\mbox{[}$\,$\mbox{]}} (\hyperlink{class_string}{String} arg)
+\item 
+\mbox{\Hypertarget{class_spreadsheet_ad0befef369800a0f0f4b631c8ff96769}\label{class_spreadsheet_ad0befef369800a0f0f4b631c8ff96769}} 
+const \hyperlink{class_cell_type}{Cell\+Type} $\ast$ \hyperlink{class_spreadsheet_ad0befef369800a0f0f4b631c8ff96769}{take\+Cell} (unsigned \hyperlink{class_spreadsheet_ac2cd7c97b5d73805edcd14891d910f51}{row}, unsigned \hyperlink{class_spreadsheet_abee8b54fceb0f2c4314bbaf624feed75}{col}) const
+\begin{DoxyCompactList}\small\item\em Take cell. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spreadsheet_a541ce5ddde2c929e67230042434f4d07}{is\+Valid\+Cell} (const \hyperlink{class_string}{String} data) const
+\item 
+void \hyperlink{class_spreadsheet_a8183b9507cf53567b831352f27350688}{set\+Cells} (\hyperlink{class_cell_type}{Cell\+Type} $\ast$$\ast$$\ast$cells, unsigned row\+Size, unsigned col\+Size)
+\begin{DoxyCompactList}\small\item\em Set Cells, row and col size, and max colum lenght. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_a0bf601cc24e9a3cc62a116e1e8e3a74f}\label{class_spreadsheet_a0bf601cc24e9a3cc62a116e1e8e3a74f}} 
+void \hyperlink{class_spreadsheet_a0bf601cc24e9a3cc62a116e1e8e3a74f}{change\+Cell} (\hyperlink{class_string}{String} index, \hyperlink{class_cell_type}{Cell\+Type} $\ast$new\+Value)
+\begin{DoxyCompactList}\small\item\em Change single cell value and type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_a24589d9a703aa835682bf3222e944ddb}\label{class_spreadsheet_a24589d9a703aa835682bf3222e944ddb}} 
+void \hyperlink{class_spreadsheet_a24589d9a703aa835682bf3222e944ddb}{set\+File\+Name} (\hyperlink{class_string}{String} \hyperlink{class_spreadsheet_a29e1c16f68d43f5ce96c15f1c18c71de}{file\+Name})
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{class_spreadsheet}{Spreadsheet} file name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_aa3a53ae9bccfcaf880465198dc7f4e33}\label{class_spreadsheet_aa3a53ae9bccfcaf880465198dc7f4e33}} 
+void \hyperlink{class_spreadsheet_aa3a53ae9bccfcaf880465198dc7f4e33}{set\+Is\+Open} (bool \hyperlink{class_spreadsheet_a4c8bab95a22c86d5a8a75e54a7e82c51}{is\+Open})
+\begin{DoxyCompactList}\small\item\em Set if the \hyperlink{class_spreadsheet}{Spreadsheet} is open. \end{DoxyCompactList}\item 
+void \hyperlink{class_spreadsheet_a5c0f7b4ebd4da1741a662fe595f32cbc}{clean} ()
+\begin{DoxyCompactList}\small\item\em Clean the \hyperlink{class_spreadsheet}{Spreadsheet} values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spreadsheet_a128c4e331142e6e5bad870cb5b2e1917}\label{class_spreadsheet_a128c4e331142e6e5bad870cb5b2e1917}} 
+static \hyperlink{class_spreadsheet}{Spreadsheet} \& \hyperlink{class_spreadsheet_a128c4e331142e6e5bad870cb5b2e1917}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Get the pointer of the \hyperlink{class_spreadsheet}{Spreadsheet} obj. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spreadsheet_aa7ca5fb8133d735022684dc11271c71a}\label{class_spreadsheet_aa7ca5fb8133d735022684dc11271c71a}} 
+static void \hyperlink{class_spreadsheet_aa7ca5fb8133d735022684dc11271c71a}{release} ()
+\begin{DoxyCompactList}\small\item\em Release the pointer of the \hyperlink{class_spreadsheet}{Spreadsheet} obj. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{class_spreadsheet}{Spreadsheet} description. 
+
+\hyperlink{class_spreadsheet}{Spreadsheet} is Singleton obj. It have\+:
+\begin{DoxyItemize}
+\item cells with position R$<$value$>$C$<$value$>$ and different type\+: int, double, string and formula.
+\item file name 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spreadsheet_a5c0f7b4ebd4da1741a662fe595f32cbc}\label{class_spreadsheet_a5c0f7b4ebd4da1741a662fe595f32cbc}} 
+\index{Spreadsheet@{Spreadsheet}!clean@{clean}}
+\index{clean@{clean}!Spreadsheet@{Spreadsheet}}
+\subsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void Spreadsheet\+::clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clean the \hyperlink{class_spreadsheet}{Spreadsheet} values. 
+
+Clean the \hyperlink{class_spreadsheet}{Spreadsheet} values \mbox{\Hypertarget{class_spreadsheet_a541ce5ddde2c929e67230042434f4d07}\label{class_spreadsheet_a541ce5ddde2c929e67230042434f4d07}} 
+\index{Spreadsheet@{Spreadsheet}!is\+Valid\+Cell@{is\+Valid\+Cell}}
+\index{is\+Valid\+Cell@{is\+Valid\+Cell}!Spreadsheet@{Spreadsheet}}
+\subsubsection{\texorpdfstring{is\+Valid\+Cell()}{isValidCell()}}
+{\footnotesize\ttfamily bool Spreadsheet\+::is\+Valid\+Cell (\begin{DoxyParamCaption}\item[{const \hyperlink{class_string}{String}}]{data }\end{DoxyParamCaption}) const}
+
+Chech if this input is with valid data\+: R$<$value$>$C$<$value$>$ \mbox{\Hypertarget{class_spreadsheet_a8183b9507cf53567b831352f27350688}\label{class_spreadsheet_a8183b9507cf53567b831352f27350688}} 
+\index{Spreadsheet@{Spreadsheet}!set\+Cells@{set\+Cells}}
+\index{set\+Cells@{set\+Cells}!Spreadsheet@{Spreadsheet}}
+\subsubsection{\texorpdfstring{set\+Cells()}{setCells()}}
+{\footnotesize\ttfamily void Spreadsheet\+::set\+Cells (\begin{DoxyParamCaption}\item[{\hyperlink{class_cell_type}{Cell\+Type} $\ast$$\ast$$\ast$}]{cells,  }\item[{unsigned}]{row\+Size,  }\item[{unsigned}]{col\+Size }\end{DoxyParamCaption})}
+
+
+
+Set Cells, row and col size, and max colum lenght. 
+
+All set functions. Reset buffer Max\+Data\+Lenght 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/ФМИ/\+I\+I semestyr/\+O\+O\+P/fn45311 Spreadsheet project-\/updated/\+Project Speadsheets/Speadsheet.\+h\item 
+D\+:/ФМИ/\+I\+I semestyr/\+O\+O\+P/fn45311 Spreadsheet project-\/updated/\+Project Speadsheets/Speadsheet.\+cpp\end{DoxyCompactItemize}
